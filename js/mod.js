@@ -1,7 +1,7 @@
 let modInfo = {
 	name: "dumpster's dank tree: RETRASHED",
 	author: "therealdumpsterfire",
-	pointsName: "fecal matter",
+	pointsName: "dollars",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
@@ -18,7 +18,7 @@ let VERSION = {
 
 let changelog = `<h1>update log:</h1><br>
 	<h3>v0.1: born to <strong>SHIT</strong>, forced to <em>wipe</em></h3><br>
-		- new wipe layer
+		- new wipe layer<br>
 		- look mom i actually added more than 2 upgrades at launch (there's 3)`
 
 let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
