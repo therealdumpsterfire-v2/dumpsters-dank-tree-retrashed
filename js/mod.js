@@ -7,7 +7,7 @@ let modInfo = {
 	discordName: "",
 	discordLink: "",
 	initialStartPoints: new Decimal (0), // Used for hard resets and new players
-	offlineLimit: 1,  // In hours
+	offlineLimit: 0,  // In hours
 }
 
 // Set your version in num and name
@@ -40,8 +40,8 @@ function canGenPoints(){
 function getPointGen() {
 	if(!canGenPoints())
 		return new Decimal(0)
-
-	let gain = new Decimal(1)
+	let gain = new Decimal(0.0035)
+	if (hasUpgrade('p', 11)) gain = gain.times(2)
 	return gain
 }
 
@@ -55,7 +55,7 @@ var displayThings = [
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.gte(new Decimal("e280000000"))
+	return player.points.gte(new Decimal("1000"))
 }
 
 

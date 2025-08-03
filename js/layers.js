@@ -1,5 +1,5 @@
 addLayer("w", {
-    name: "wipes", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "toilet wipes", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "W", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -7,12 +7,12 @@ addLayer("w", {
 		points: new Decimal(0),
     }},
     color: "#ffffff",
-    requires: new Decimal(10), // Can be a function that takes requirement increases into account
-    resource: "baby wipes", // Name of prestige currency
+    requires: new Decimal(0.005), // Can be a function that takes requirement increases into account
+    resource: "toilet wipes", // Name of prestige currency
     baseResource: "dollars", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
-    type: "static", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
-    exponent: -0.5, // Prestige currency exponent
+    type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
+    exponent: 1, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
         return mult
@@ -28,9 +28,8 @@ addLayer("w", {
     ,
     upgrades: {
     11: {
-        title: "first upgrade",
-        description: "Blah",
-        cost: new Decimal(100),
-    },
-}
+        title: "toilet",
+        description: "double point gain i guess",
+        cost: new Decimal(1),
+    }},
 })
