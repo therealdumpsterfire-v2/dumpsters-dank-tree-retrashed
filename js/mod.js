@@ -40,11 +40,12 @@ function canGenPoints(){
 function getPointGen() {
 	if(!canGenPoints())
 		return new Decimal(0)
-	let gain = new Decimal(0.0035)
-	if (hasUpgrade('p', 11)) gain = gain.times(2)
+
+	let gain = new Decimal(1)
+    if (hasUpgrade('w', 11)) gain = gain.times(3)
+	if (hasMilestone('w', 0)) gain = gain.pow(1.5)
 	return gain
 }
-
 // You can add non-layer related variables that should to into "player" and be saved here, along with default values
 function addedPlayerData() { return {
 }}

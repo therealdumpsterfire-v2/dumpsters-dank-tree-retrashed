@@ -1,6 +1,6 @@
 addLayer("w", {
     name: "toilet wipes", // This is optional, only used in a few places, If absent it just uses the layer id.
-    symbol: "W", // This appears on the layer's node. Default is the id with the first letter capitalized
+    symbol: "🧻", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
@@ -24,12 +24,17 @@ addLayer("w", {
     hotkeys: [
         {key: "w", description: "w: reset for wipes", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
-    ,
+    layerShown(){return true},
     upgrades: {
     11: {
-        title: "toilet",
-        description: "double point gain i guess",
-        cost: new Decimal(1),
+        title: "get more money by an investment",
+        description: "triple money gain cuz the stock market went in your favor",
+        cost: new Decimal(1000),
+    }},
+    milestones: {
+    0: {
+        requirementDescription: "100,000 wipes",
+        effectDescription: "increases dollar gain to the power of 1.5",
+        done(){return player.w.points.gte(1e5)}
     }},
 })
