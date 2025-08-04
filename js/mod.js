@@ -1,5 +1,5 @@
 let modInfo = {
-	name: "dumpster's dank tree: RETRASHED",
+	name: "The Restaurant Tree",
 	author: "therealdumpsterfire",
 	pointsName: "dollars",
 	modFiles: ["layers.js", "tree.js"],
@@ -12,14 +12,12 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.1: born to shit, forced to wipe",
+	num: "0.1: JESSE, let's cook",
 	name: "",
 }
 
 let changelog = `<h1>update log:</h1><br>
-	<h3>v0.1: born to <strong>SHIT</strong>, forced to <em>wipe</em></h3><br>
-		- new wipe layer<br>
-		- look mom i actually added more than 2 upgrades at launch (there's 3)`
+	<h3>v0.1: <strong>JESSE</strong>, let's <em>COOK</em></h3><br>`
 
 let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
 
@@ -58,8 +56,6 @@ var displayThings = [
 function isEndgame() {
 	return player.points.gte(new Decimal("1000"))
 }
-
-
 
 // Less important things beyond this point!
 
