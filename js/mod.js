@@ -12,14 +12,14 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.1: JESSE, let's cook",
-	name: "",
+	num: "version 0.1",
+	name: "JESSE, let's COOK",
 }
 
 let changelog = `<h1>update log:</h1><br>
 	<h3>v0.1: <strong>JESSE</strong>, let's <em>COOK</em></h3><br>`
 
-let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
+let winText = `you cooked man, you completed ${VERSION.num} UPDATE OF... THE... RESTAURANT... TREE!!!`
 
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
 // (The ones here are examples, all official functions are already taken care of)
@@ -40,8 +40,8 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
-    if (hasUpgrade('w', 11)) gain = gain.times(3)
-	if (hasMilestone('w', 0)) gain = gain.pow(1.5)
+    if (hasUpgrade('t', 11)) gain = gain.times(3)
+	if (hasMilestone('t', 0)) gain = gain.div(1.5)
 	return gain
 }
 // You can add non-layer related variables that should to into "player" and be saved here, along with default values
@@ -54,14 +54,14 @@ var displayThings = [
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.gte(new Decimal("1000"))
+	return player.points.gte(new Decimal("5"))
 }
 
 // Less important things beyond this point!
 
 // Style for the background, can be a function
 var backgroundStyle = {
-
+	background: "url('https://i.imgur.com/YxZrnzI_d.webp')",
 }
 
 // You can change this if you have things that can be messed up by long tick lengths

@@ -3,15 +3,15 @@ body {
 	color: var(--color);
 	overflow: hidden;
 	--background: #0f0f0f;
-	--color: #dfdfdf;
-	--points: #ffffff;
+	--color: #ff0000;
+	--points: #ff3e3e;
 	background: var(--background)
 }
 
 /* General text */
 h1, h2, h3, b, input {
 	display: inline;
-	font-family: "Lucida Console", "Courier New", monospace
+	font-family: "Comic Sans MS", "Comic Sans", "cursive";
 }
 
 /* These are styles for different states of components. You can make layer-specific versions with .c.locked, for example */
@@ -20,7 +20,7 @@ h1, h2, h3, b, input {
 	cursor: not-allowed;
 }
 
-/* Can meens can be clicked/bought/etc */
+/* Can means can be clicked/bought/etc */
 .can {
 	cursor: pointer;
 }
@@ -31,7 +31,7 @@ h1, h2, h3, b, input {
 }
 
 .bought {
-	background-color: #77bf5f;
+	background-color: #bfa15f;
 	cursor: default;
 }
 

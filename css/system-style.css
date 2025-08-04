@@ -1,18 +1,18 @@
 * {
 	transition-duration: 0.5s;
 	text-align: center;
-	font-family: "Inconsolata", monospace;
+	font-family: "Comic Sans MS", "Comic Sans", "cursive";
 	font-weight: bold;
-	table-align: center;
+	vertical-align: center;
 	margin: auto;
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
-
 }
 
 *:focus {
 	outline: none;
-	webkit-outline: none;
+	-webkit-line-break: none;
+	line-break: auto;
 }
 
 html, body {
